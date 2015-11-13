@@ -11,11 +11,12 @@ Pod::Spec.new do |s|
 
 
   s.name         = "Template"
-  s.version      = "0.1.0"
-  s.summary      = "This is a short description of a Template A short description of Template."
+  s.version      = "0.1.1"
+  s.summary      = "This is a short description of a Template Please dont use this "
   s.requires_arc = true
 
   s.description  = <<-DESC
+                    This is a description of a simple project template it is written in swift
                    DESC
 
   s.homepage     = "https://github.com/rickzonhagos/Template"
@@ -25,7 +26,7 @@ Pod::Spec.new do |s|
   s.author             = { "rickzonhagos" => "rickzonhagos@gmail.com" }
 
   # s.platform     = :ios
-  # s.platform     = :ios, "5.0"
+   s.platform     = :ios, "8.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -33,11 +34,11 @@ Pod::Spec.new do |s|
   # s.watchos.deployment_target = "2.0"
   # s.tvos.deployment_target = "9.0"
 
-  s.source       = { :git => "https://github.com/rickzonhagos/Template", :tag => "0.1.0" }
+  s.source       = { :git => "https://github.com/rickzonhagos/Template.git", :tag => "0.1.0" }
 
 
 
-  s.source_files  =  "Template/**/*.{h,m}"
+  s.source_files  =  "Template", "Template/**/*.{h,m}"
 
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

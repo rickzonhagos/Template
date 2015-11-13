@@ -8,9 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		8E178135BA42709136EDE793 /* Pods_Template.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29AB9DC0DDC69C336BD950E0 /* Pods_Template.framework */; };
-		956968B21BF5736D00CD24DD /* Template.h in Headers */ = {isa = PBXBuildFile; fileRef = 956968B11BF5736D00CD24DD /* Template.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		956968B91BF5736D00CD24DD /* Template.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 956968AE1BF5736D00CD24DD /* Template.framework */; };
 		956968BE1BF5736D00CD24DD /* TemplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956968BD1BF5736D00CD24DD /* TemplateTests.swift */; };
+		956968CA1BF580E900CD24DD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956968C91BF580E900CD24DD /* BaseViewController.swift */; };
+		956968DC1BF593E700CD24DD /* BaseModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956968DB1BF593E700CD24DD /* BaseModelData.swift */; };
+		956968DF1BF59F6700CD24DD /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956968DE1BF59F6700CD24DD /* Service.swift */; };
+		956968E11BF5C03B00CD24DD /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956968E01BF5C03B00CD24DD /* BaseModel.swift */; };
+		956968E31BF5C6DE00CD24DD /* ServiceEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956968E21BF5C6DE00CD24DD /* ServiceEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,11 +31,16 @@
 		29AB9DC0DDC69C336BD950E0 /* Pods_Template.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Template.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32C34B8C49053EA545449D2B /* Pods-Template.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Template.release.xcconfig"; path = "Pods/Target Support Files/Pods-Template/Pods-Template.release.xcconfig"; sourceTree = "<group>"; };
 		956968AE1BF5736D00CD24DD /* Template.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Template.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		956968B11BF5736D00CD24DD /* Template.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Template.h; sourceTree = "<group>"; };
 		956968B31BF5736D00CD24DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		956968B81BF5736D00CD24DD /* TemplateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TemplateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		956968BD1BF5736D00CD24DD /* TemplateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateTests.swift; sourceTree = "<group>"; };
 		956968BF1BF5736D00CD24DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		956968C91BF580E900CD24DD /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		956968DB1BF593E700CD24DD /* BaseModelData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModelData.swift; sourceTree = "<group>"; };
+		956968DE1BF59F6700CD24DD /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		956968E01BF5C03B00CD24DD /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		956968E21BF5C6DE00CD24DD /* ServiceEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceEnum.swift; sourceTree = "<group>"; };
+		956968E41BF5C78C00CD24DD /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		E72D4C29FEE16A5641FB4492 /* Pods-Template.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Template.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Template/Pods-Template.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,8 +104,12 @@
 		956968B01BF5736D00CD24DD /* Template */ = {
 			isa = PBXGroup;
 			children = (
-				956968B11BF5736D00CD24DD /* Template.h */,
+				956968DD1BF59F5C00CD24DD /* Service */,
+				956968DA1BF593C900CD24DD /* BaseModelData */,
+				956968D41BF5938A00CD24DD /* BaseModel */,
+				956968C81BF580D300CD24DD /* BaseView */,
 				956968B31BF5736D00CD24DD /* Info.plist */,
+				956968E41BF5C78C00CD24DD /* MyPlayground.playground */,
 			);
 			path = Template;
 			sourceTree = "<group>";
@@ -110,6 +123,39 @@
 			path = TemplateTests;
 			sourceTree = "<group>";
 		};
+		956968C81BF580D300CD24DD /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				956968C91BF580E900CD24DD /* BaseViewController.swift */,
+			);
+			path = BaseView;
+			sourceTree = "<group>";
+		};
+		956968D41BF5938A00CD24DD /* BaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				956968E01BF5C03B00CD24DD /* BaseModel.swift */,
+			);
+			path = BaseModel;
+			sourceTree = "<group>";
+		};
+		956968DA1BF593C900CD24DD /* BaseModelData */ = {
+			isa = PBXGroup;
+			children = (
+				956968DB1BF593E700CD24DD /* BaseModelData.swift */,
+			);
+			path = BaseModelData;
+			sourceTree = "<group>";
+		};
+		956968DD1BF59F5C00CD24DD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				956968DE1BF59F6700CD24DD /* Service.swift */,
+				956968E21BF5C6DE00CD24DD /* ServiceEnum.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -117,7 +163,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				956968B21BF5736D00CD24DD /* Template.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +298,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				956968E31BF5C6DE00CD24DD /* ServiceEnum.swift in Sources */,
+				956968DC1BF593E700CD24DD /* BaseModelData.swift in Sources */,
+				956968CA1BF580E900CD24DD /* BaseViewController.swift in Sources */,
+				956968E11BF5C03B00CD24DD /* BaseModel.swift in Sources */,
+				956968DF1BF59F6700CD24DD /* Service.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +418,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E72D4C29FEE16A5641FB4492 /* Pods-Template.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -378,6 +429,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ph.com.rickzonhagos.Template;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -385,6 +438,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 32C34B8C49053EA545449D2B /* Pods-Template.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -395,6 +449,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ph.com.rickzonhagos.Template;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
